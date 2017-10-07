@@ -16,5 +16,29 @@
 // }
 
 exports.index = function(req, res){
-	res.render('home.twig')
+	let content = {
+		highlight: {
+			url: '/assets/images/home/banner/highlight.jpg',
+			title: 'Hello'
+		},
+		thumbnail: [
+			{
+				url: '/assets/images/home/banner/thumbnail-1.jpg',
+				title: 'thumbnail1'
+			},
+			{
+				url: '/assets/images/home/banner/thumbnail-2.jpg',
+				title: 'thumbnail2'
+			},
+			{
+				url: '/assets/images/home/banner/thumbnail-3.jpg',
+				title: 'thumbnail3'
+			},
+			{
+				url: '/assets/images/home/banner/thumbnail-4.jpg',
+				title: 'thumbnail4'
+			}
+		]
+	}
+	res.render('home.twig', content)
 }
